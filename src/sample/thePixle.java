@@ -10,7 +10,7 @@ public class thePixle {
     protected int vertical;
     protected int width;
     protected int height;
-    protected UDPmessage receivedMessage;
+    protected String receivedMessage;
     protected Color myColor;
 
 
@@ -64,9 +64,9 @@ public class thePixle {
         this.height = height;
     }
 
-    public UDPmessage getMessage() {
+    public String getReceivedMessage(){
         return receivedMessage;
-}
+    }
 
     public Color getMyColor() {
         return myColor;
