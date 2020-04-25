@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <center>
+      <Canvas fx:id="myCanvas" height="223.0" width="456.0" BorderPane.alignment="TOP_RIGHT">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Canvas>
+   </center>
+   <left>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="49.0" prefWidth="167.0">
+               <children>
+                  <Label fx:id="ToggleButtonECHO" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="76.0" prefWidth="94.0" text="Echoserver on 127.0.0.1:7000" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ToggleButton fx:id="toggleButtonEcho" mnemonicParsing="false" onAction="#toggleButtonEchoServer" text="ON">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="10.0" top="25.0" />
+                     </HBox.margin>
+                  </ToggleButton>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin></HBox>
+            <HBox prefHeight="122.0" prefWidth="167.0">
+               <children>
+                  <Label alignment="TOP_RIGHT" prefHeight="44.0" prefWidth="90.0" text="Broadcast on port: 7007" textAlignment="CENTER" wrapText="true">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="40.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ToggleButton fx:id="toggleButtonBroadcast" mnemonicParsing="false" onAction="#toggleButtonBroadcastServer" prefHeight="12.0" prefWidth="34.0" text="ON">
+                     <HBox.margin>
+                        <Insets left="15.0" top="45.0" />
+                     </HBox.margin></ToggleButton>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <Button alignment="CENTER" mnemonicParsing="false" text="Clear Canvas">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="35.0" />
+               </VBox.margin>
+            </Button>
+            <ToggleButton mnemonicParsing="false" onAction="#clearLog" text="Clear Table">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="40.0" />
+               </VBox.margin>
+            </ToggleButton>
+         </children></VBox>
+   </left>
+   <top>
+      <HBox prefHeight="48.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <TableView fx:id="table" prefHeight="101.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <columns>
+            <TableColumn prefWidth="138.0" text="Time">
+               <cellValueFactory>
+                  <PropertyValueFactory property="time" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn prefWidth="247.0" text="Message">
+               <cellValueFactory>
+                  <PropertyValueFactory property="message" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn minWidth="0.0" prefWidth="51.0" text="Length">
+               <cellValueFactory>
+                  <PropertyValueFactory property="length" />
+               </cellValueFactory>
+            </TableColumn>
+            <TableColumn minWidth="0.0" prefWidth="147.0" text="IP">
+               <cellValueFactory>
+                  <PropertyValueFactory property="IpAndString" />
+               </cellValueFactory>
+            </TableColumn>
+         </columns>
+      </TableView>
+   </bottom>
+</BorderPane>
