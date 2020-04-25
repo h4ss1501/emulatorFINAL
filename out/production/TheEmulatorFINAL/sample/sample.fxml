@@ -25,7 +25,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <ToggleButton fx:id="toggleButtonEcho" mnemonicParsing="false" onAction="#toggleButtonEchoServer" text="ON">
+                  <ToggleButton fx:id="toggleButtonEcho" mnemonicParsing="false" onAction="#toggleButtonEchoServer" prefHeight="25.0" prefWidth="40.0" text="ON">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -37,7 +37,7 @@
                <VBox.margin>
                   <Insets />
                </VBox.margin></HBox>
-            <HBox prefHeight="122.0" prefWidth="167.0">
+            <HBox prefHeight="115.0" prefWidth="139.0">
                <children>
                   <Label alignment="TOP_RIGHT" prefHeight="44.0" prefWidth="90.0" text="Broadcast on port: 7007" textAlignment="CENTER" wrapText="true">
                      <opaqueInsets>
@@ -50,7 +50,7 @@
                         <Insets top="40.0" />
                      </HBox.margin>
                   </Label>
-                  <ToggleButton fx:id="toggleButtonBroadcast" mnemonicParsing="false" onAction="#toggleButtonBroadcastServer" prefHeight="12.0" prefWidth="34.0" text="ON">
+                  <ToggleButton fx:id="toggleButtonBroadcast" mnemonicParsing="false" onAction="#toggleButtonBroadcastServer" prefHeight="25.0" prefWidth="39.0" text="ON">
                      <HBox.margin>
                         <Insets left="15.0" top="45.0" />
                      </HBox.margin></ToggleButton>

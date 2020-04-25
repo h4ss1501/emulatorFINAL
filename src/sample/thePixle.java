@@ -10,7 +10,7 @@ public class thePixle {
     protected int vertical;
     protected int width;
     protected int height;
-    protected String receivedMessage;
+    protected UDPmessage receivedMessage;
     protected Color myColor;
 
 
@@ -18,11 +18,18 @@ public class thePixle {
 
     //the draw method will require a GraphicsContent, since it will be the pen that will allows to draw on the canvas.
 
-    //abstract class
+    //constructor
+    public thePixle (UDPmessage receivedMessage){
+
+    }
+
+
+
+    //drawing method
     public void drawPixle(GraphicsContext graphicsContext){
 
         graphicsContext.setFill(myColor);
-        graphicsContext.fillRect(horizontal, vertical,width,height);
+        graphicsContext.strokeOval(horizontal, vertical,width,height);
 
 
 
@@ -65,7 +72,7 @@ public class thePixle {
     }
 
     public String getReceivedMessage(){
-        return receivedMessage;
+        return toString();
     }
 
     public Color getMyColor() {

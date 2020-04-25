@@ -1,18 +1,20 @@
 package sample;
 
+import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.TableView;
 import javafx.scene.control.ToggleButton;
-
-import java.awt.*;
+import javafx.collections.ObservableList;
 
 
 public class Controller {
 
+    ObservableList<thePixle> pixel = FXCollections.observableArrayList();
+
     @FXML
-    TableView <UDPmessage> table;
+    private TableView <UDPmessage> table;
     @FXML
     ToggleButton toggleButtonEcho;
     @FXML
@@ -85,10 +87,7 @@ public class Controller {
         udpConnector = new UDPConnector(this);
         new Thread(udpConnector).start();
     }
-/*
-    private void startPainting(){
 
-    }*/
 
     public void receiveMessage(UDPmessage udpMessage)
     {
