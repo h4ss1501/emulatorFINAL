@@ -3,7 +3,7 @@ package sample;
 import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.paint.Color;
 
-public class thePixle extends DrawableObject {
+public class thePixle {
 
     //fields
     private int x;
@@ -24,11 +24,13 @@ public class thePixle extends DrawableObject {
 
 
     //drawing method
-    @Override
-    public void DrawObject(GraphicsContext graphicsContext) {
+    public void drawPixle(GraphicsContext graphicsContext){
+
         graphicsContext.setFill(getMyColor());
         graphicsContext.setStroke(getMyColor());
         graphicsContext.strokeOval(x, y,width,height);
+
+
 
     }
     public void convertMesToCoordinates(UDPmessage receivedMessage){
@@ -82,7 +84,6 @@ public class thePixle extends DrawableObject {
     public int getWidth() {
         return width;
     }
-
 
     public void setWidth(int width) {
         this.width = width;
