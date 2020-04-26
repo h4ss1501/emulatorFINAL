@@ -13,22 +13,14 @@ public class thePixle {
     private int canvasMiddleX = x /2;
     private int canvasMiddleY = y /2;
     private UDPmessage receivedMessage;
-    private Color myColor;
-    protected boolean
+    private Color myColor = Color.BLACK;
+    private int myspeed;
+    protected boolean activator;
 
 
     //drawable method, that allows us to draw.
 
     //the draw method will require a GraphicsContent, since it will be the pen that will allows to draw on the canvas.
-
-
-
-
-    //constructor
-    public thePixle (){
-
-    }
-
 
 
     //drawing method
@@ -45,19 +37,19 @@ public class thePixle {
 
 
     public void convertMesToCoordinates(UDPmessage receivedMessage){
-
+/*
         String mes2Cor = receivedMessage.getMessage();
-       /* //coordinates
-        int canvasMiddleX = this.canvasMiddleX;
-        int canvasMiddleY = this.canvasMiddleY;
 
 
         double x = 0;
-        double y = 0;*/
+        double y = 0;
 
-       if(mes2Cor.contains("init 9 9"){
-
-       }
+       if(mes2Cor.contains("init 9 9")) {
+            setActivator(true);
+            if(mes2Cor.contains("moveup")){
+                setX(getX()+10);
+            }
+        }
         /*
         if(mes2Cor.contains("moveup")){
             thePixle.set
@@ -75,7 +67,7 @@ public class thePixle {
         */
 
     }
-
+    //getters and setters
     public int getX() {
         return x;
     }
@@ -120,6 +112,22 @@ public class thePixle {
         this.myColor = myColor;
     }
 
-    //getters and setters
+    public boolean isActivator() {
+        return activator;
+    }
+
+    public void setActivator(boolean activator) {
+        this.activator = activator;
+    }
+
+    public int getMyspeed() {
+        return myspeed;
+    }
+
+    public void setMyspeed(int myspeed) {
+        this.myspeed = myspeed;
+    }
+
+
 
 }
