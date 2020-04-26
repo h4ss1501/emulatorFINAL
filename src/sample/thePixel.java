@@ -26,15 +26,9 @@ public class thePixel extends DrawableObject{
     //drawing method
     @Override
     public void DrawObject(GraphicsContext graphicsContext) {
-
-    }
-
-    public void drawPixel(GraphicsContext graphicsContext){
-
         graphicsContext.setFill(getMyColor());
         graphicsContext.setStroke(getMyColor());
         graphicsContext.strokeOval(x, y,width,height);
-
 
 
     }

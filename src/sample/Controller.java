@@ -78,7 +78,7 @@ public class Controller {
 
     public void drawOnCanvas(){
         clearCanvas(); //we will be clearing canvas everytime, we update
-        myPixle.drawPixel(Gcontext);
+        myPixle.DrawObject(Gcontext);
     }
 
     public void clearCanvas(){
