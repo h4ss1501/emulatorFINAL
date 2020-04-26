@@ -8,11 +8,8 @@ public class thePixel extends DrawableObject{
     //fields
     private int x;
     private int y;
-    private int width;
-    private int height;
-    private int canvasMiddleX = x /2;
-    private int canvasMiddleY = y /2;
-    private UDPmessage receivedMessage;
+    private int width = 15;
+    private int height = 15;
     private Color myColor = Color.BLACK;
     private int myspeed;
     protected boolean activator;
