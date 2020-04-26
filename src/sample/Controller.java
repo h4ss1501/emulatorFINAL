@@ -111,8 +111,9 @@ public class Controller {
             myPixle.setY((int) myCanvas.getHeight() / 2);
             table.getItems().add(0, udpMessage);
             drawOnCanvas(); //draws the pixle on canvas if initialized
+        }
 
-        }else if(myPixle.isActivator() == true) {
+        if (myPixle.isActivator() == true) {
 
             if (udpMessage.getMessage().contains("speed 1")) {
                 myPixle.setMyspeed(10);
@@ -142,6 +143,8 @@ public class Controller {
                 myPixle.setX(myPixle.getX() - myPixle.getMyspeed());
             }
             table.getItems().add(0, udpMessage);
+            drawOnCanvas();
+
         }else{
             myPixle.setActivator(false);
             System.out.println("COMMAND NOT ACCEPTED: Please intiate the pixle first by clicking the controller");
