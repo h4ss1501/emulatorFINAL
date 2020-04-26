@@ -113,21 +113,23 @@ public class Controller {
             drawOnCanvas(); //draws the pixle on canvas if initialized
         }
 
-        if (myPixel.isActivator() == true) {
+        if (myPixel.isActivator() == true){
+
 
             if (udpMessage.getMessage().contains("speed1")) {
                 myPixel.setMyspeed(10);
             }
-            if (udpMessage.getMessage().contains("speed4")) {
+            else if (udpMessage.getMessage().contains("speed4")) {
                 myPixel.setMyspeed(15);
             }
-            if (udpMessage.getMessage().contains("speed7")) {
+            else if (udpMessage.getMessage().contains("speed7")) {
                 myPixel.setMyspeed(20);
             }
-            if (udpMessage.getMessage().contains("speed9")) {
+            else if (udpMessage.getMessage().contains("speed9")) {
                 myPixel.setMyspeed(25);
-            } else{
-                myPixel.setMyspeed(1);}
+            }else{
+                myPixel.setMyspeed(2);}
+
 
 
             if (udpMessage.getMessage().contains("moveup")) {

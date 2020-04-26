@@ -5,6 +5,8 @@ import javafx.scene.paint.Color;
 
 public class thePixel extends DrawableObject{
 
+    //pixel class extends the abstract class DrawableObject
+
     //fields
     private int x;
     private int y;
@@ -15,11 +17,11 @@ public class thePixel extends DrawableObject{
     protected boolean activator;
 
 
+
+
     //drawable method, that allows us to draw.
 
     //the draw method will require a GraphicsContent, since it will be the pen that will allows to draw on the canvas.
-
-
     //drawing method
     @Override
     public void DrawObject(GraphicsContext graphicsContext) {
@@ -29,37 +31,6 @@ public class thePixel extends DrawableObject{
 
 
     }
-    /*
-    public void convertMesToCoordinates(UDPmessage receivedMessage){
-/*
-        String mes2Cor = receivedMessage.getMessage();
-
-
-        double x = 0;
-        double y = 0;
-
-       if(mes2Cor.contains("init 9 9")) {
-            setActivator(true);
-            if(mes2Cor.contains("moveup")){
-                setX(getX()+10);
-            }
-        }
-        /*
-        if(mes2Cor.contains("moveup")){
-            thePixle.set
-        }else if(mes2Cor.contains("movedown")){
-            x = canvasMiddleX;
-            y = canvasMiddleY - 10.0;
-        }else if(mes2Cor.contains("moveright")){
-            x = canvasMiddleX + 10.0;
-            y = canvasMiddleY;
-        }else if(mes2Cor.contains("moveleft")){
-            x = canvasMiddleX -10.0;
-            y = canvasMiddleY;
-        }
-
-        */
-
 
     //getters and setters
     public int getX() {
