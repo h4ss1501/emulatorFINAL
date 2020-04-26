@@ -6,14 +6,15 @@ import javafx.scene.paint.Color;
 public class thePixle {
 
     //fields
-    protected int horizontal;
-    protected int vertical;
-    protected int width;
-    protected int height;
-    protected int canvasMiddleX = horizontal/2;
-    protected int canvasMiddleY = vertical/2;
-    protected UDPmessage receivedMessage;
-    protected Color myColor;
+    private int x;
+    private int y;
+    private int width;
+    private int height;
+    private int canvasMiddleX = x /2;
+    private int canvasMiddleY = y /2;
+    private UDPmessage receivedMessage;
+    private Color myColor;
+    protected boolean
 
 
     //drawable method, that allows us to draw.
@@ -24,7 +25,7 @@ public class thePixle {
 
 
     //constructor
-    public thePixle (UDPmessage receivedMessage){
+    public thePixle (){
 
     }
 
@@ -33,8 +34,9 @@ public class thePixle {
     //drawing method
     public void drawPixle(GraphicsContext graphicsContext){
 
-        graphicsContext.setFill(myColor);
-        graphicsContext.strokeOval(horizontal, vertical,width,height);
+        graphicsContext.setFill(getMyColor());
+        graphicsContext.setStroke(getMyColor());
+        graphicsContext.strokeOval(x, y,width,height);
 
 
 
@@ -42,20 +44,23 @@ public class thePixle {
 
 
 
-    public void convertMesToCoordinates(UDPmessage receivedMessage, GraphicsContext graphicsContext){
+    public void convertMesToCoordinates(UDPmessage receivedMessage){
 
         String mes2Cor = receivedMessage.getMessage();
-        //coordinates
+       /* //coordinates
         int canvasMiddleX = this.canvasMiddleX;
         int canvasMiddleY = this.canvasMiddleY;
 
 
         double x = 0;
-        double y = 0;
+        double y = 0;*/
 
+       if(mes2Cor.contains("init 9 9"){
+
+       }
+        /*
         if(mes2Cor.contains("moveup")){
-            x = canvasMiddleX;
-            y = canvasMiddleY + 10.0;
+            thePixle.set
         }else if(mes2Cor.contains("movedown")){
             x = canvasMiddleX;
             y = canvasMiddleY - 10.0;
@@ -67,26 +72,24 @@ public class thePixle {
             y = canvasMiddleY;
         }
 
-        graphicsContext.setFill(myColor);
-        graphicsContext.strokeOval(x,y,width,height);
-
+        */
 
     }
 
-    public int getHorizontal() {
-        return horizontal;
+    public int getX() {
+        return x;
     }
 
-    public void setHorizontal(int horizontal) {
-        this.horizontal = horizontal;
+    public void setX(int x) {
+        this.x = x;
     }
 
-    public int getVertical() {
-        return vertical;
+    public int getY() {
+        return y;
     }
 
-    public void setVertical(int vertical) {
-        this.vertical = vertical;
+    public void setY(int y) {
+        this.y = y;
     }
 
     public int getWidth() {

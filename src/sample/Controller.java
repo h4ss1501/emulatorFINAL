@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.ToggleButton;
 import javafx.collections.ObservableList;
@@ -21,8 +22,10 @@ public class Controller {
     ToggleButton toggleButtonBroadcast;
     @FXML
     private Canvas myCanvas;
-
     private GraphicsContext Gcontext;
+
+    //instantiating the pixle.
+    public thePixle myPixle = new thePixle();
 
 
 
