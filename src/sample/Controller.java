@@ -126,8 +126,8 @@ public class Controller {
             }
             if (udpMessage.getMessage().contains("speed9")) {
                 myPixel.setMyspeed(25);
-            } else
-                myPixel.setMyspeed(1);
+            } else{
+                myPixel.setMyspeed(1);}
 
 
             if (udpMessage.getMessage().contains("moveup")) {
