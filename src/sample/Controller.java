@@ -22,12 +22,14 @@ public class Controller {
     @FXML
     private Canvas myCanvas;
 
+    private GraphicsContext Gcontext;
+
 
 
     //fields
     private UDPConnector udpConnector;
     private UDPbroadcastServer broadcastServer;
-    GraphicsContext myGraphicsContext;
+
 
     //buttons
     public void toggleButtonEchoServer() {
@@ -69,7 +71,7 @@ public class Controller {
         startBroadcasting();
 
         //initializing graphicsContext pen for drawing on canvas
-        myGraphicsContext = myCanvas.getGraphicsContext2D();
+        Gcontext = myCanvas.getGraphicsContext2D();
 
     }
     public void clearLog() {

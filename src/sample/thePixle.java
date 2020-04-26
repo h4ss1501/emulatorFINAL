@@ -10,6 +10,8 @@ public class thePixle {
     protected int vertical;
     protected int width;
     protected int height;
+    protected int canvasMiddleX = horizontal/2;
+    protected int canvasMiddleY = vertical/2;
     protected UDPmessage receivedMessage;
     protected Color myColor;
 
@@ -17,6 +19,9 @@ public class thePixle {
     //drawable method, that allows us to draw.
 
     //the draw method will require a GraphicsContent, since it will be the pen that will allows to draw on the canvas.
+
+
+
 
     //constructor
     public thePixle (UDPmessage receivedMessage){
@@ -35,7 +40,36 @@ public class thePixle {
 
     }
 
-    public void movement(String command, int speed){
+
+
+    public void convertMesToCoordinates(UDPmessage receivedMessage, GraphicsContext graphicsContext){
+
+        String mes2Cor = receivedMessage.getMessage();
+        //coordinates
+        int canvasMiddleX = this.canvasMiddleX;
+        int canvasMiddleY = this.canvasMiddleY;
+
+
+        double x = 0;
+        double y = 0;
+
+        if(mes2Cor.contains("moveup")){
+            x = canvasMiddleX;
+            y = canvasMiddleY + 10.0;
+        }else if(mes2Cor.contains("movedown")){
+            x = canvasMiddleX;
+            y = canvasMiddleY - 10.0;
+        }else if(mes2Cor.contains("moveright")){
+            x = canvasMiddleX + 10.0;
+            y = canvasMiddleY;
+        }else if(mes2Cor.contains("moveleft")){
+            x = canvasMiddleX -10.0;
+            y = canvasMiddleY;
+        }
+
+        graphicsContext.setFill(myColor);
+        graphicsContext.strokeOval(x,y,width,height);
+
 
     }
 
