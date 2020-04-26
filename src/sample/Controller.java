@@ -23,7 +23,7 @@ public class Controller {
     @FXML
     ToggleButton clearTableButton;
 
-    private GraphicsContext Gcontext;
+    private GraphicsContext graphContext;
 
     //instantiating the pixle.
     public thePixel myPixle = new thePixel();
@@ -73,16 +73,17 @@ public class Controller {
 
         startUdpConnection();
         startBroadcasting();
+        graphContext = myCanvas.getGraphicsContext2D();
 
     }
 
     public void drawOnCanvas(){
         clearCanvas(); //we will be clearing canvas everytime, we update
-        myPixle.DrawObject(Gcontext);
+        myPixle.DrawObject(graphContext);
     }
 
     public void clearCanvas(){
-        Gcontext.clearRect(0,0,myCanvas.getWidth(),myCanvas.getHeight());
+        graphContext.clearRect(0,0,myCanvas.getWidth(),myCanvas.getHeight());
     }
     public void clearLog() {
         table.getItems().clear();
