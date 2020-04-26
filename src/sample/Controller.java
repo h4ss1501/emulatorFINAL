@@ -1,6 +1,5 @@
 package sample;
 
-import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
@@ -27,7 +26,7 @@ public class Controller {
     private GraphicsContext Gcontext;
 
     //instantiating the pixle.
-    public thePixle myPixle = new thePixle();
+    public thePixel myPixle = new thePixel();
 
 
 
@@ -79,7 +78,7 @@ public class Controller {
 
     public void drawOnCanvas(){
         clearCanvas(); //we will be clearing canvas everytime, we update
-        myPixle.drawPixle(Gcontext);
+        myPixle.drawPixel(Gcontext);
     }
 
     public void clearCanvas(){
