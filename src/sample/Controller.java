@@ -115,19 +115,19 @@ public class Controller {
 
         if (myPixle.isActivator() == true) {
 
-            if (udpMessage.getMessage().contains("speed 1")) {
+            if (udpMessage.getMessage().contains("speed1")) {
                 myPixle.setMyspeed(10);
             }
-            if (udpMessage.getMessage().contains("speed 4")) {
+            if (udpMessage.getMessage().contains("speed4")) {
                 myPixle.setMyspeed(15);
             }
-            if (udpMessage.getMessage().contains("speed 7")) {
+            if (udpMessage.getMessage().contains("speed7")) {
                 myPixle.setMyspeed(20);
             }
-            if (udpMessage.getMessage().contains("speed 9")) {
+            if (udpMessage.getMessage().contains("speed9")) {
                 myPixle.setMyspeed(25);
             } else {
-                myPixle.setMyspeed(5);
+                myPixle.setMyspeed(1);
             }
 
             if (udpMessage.getMessage().contains("moveup")) {

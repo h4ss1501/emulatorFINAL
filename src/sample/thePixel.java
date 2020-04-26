@@ -119,6 +119,7 @@ public class thePixel extends DrawableObject{
     }
 
     public void setMyspeed(int myspeed) {
+
         this.myspeed = myspeed;
     }
 
