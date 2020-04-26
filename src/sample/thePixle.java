@@ -33,9 +33,6 @@ public class thePixle {
 
 
     }
-
-
-
     public void convertMesToCoordinates(UDPmessage receivedMessage){
 /*
         String mes2Cor = receivedMessage.getMessage();
