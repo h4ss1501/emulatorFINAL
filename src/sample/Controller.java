@@ -19,6 +19,11 @@ public class Controller {
     ToggleButton toggleButtonBroadcast;
     @FXML
     private Canvas myCanvas;
+    @FXML
+    ToggleButton clearCanvasButton;
+    @FXML
+    ToggleButton clearTableButton;
+
     private GraphicsContext Gcontext;
 
     //instantiating the pixle.

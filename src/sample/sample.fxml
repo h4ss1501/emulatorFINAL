@@ -59,12 +59,12 @@
                   <Insets />
                </VBox.margin>
             </HBox>
-            <Button alignment="CENTER" mnemonicParsing="false" text="Clear Canvas">
+            <Button fx:id="clearCanvasButton" alignment="CENTER" mnemonicParsing="false" onAction="#clearCanvas" text="Clear Canvas">
                <VBox.margin>
                   <Insets bottom="5.0" left="35.0" />
                </VBox.margin>
             </Button>
-            <ToggleButton mnemonicParsing="false" onAction="#clearLog" text="Clear Table">
+            <ToggleButton fx:id="clearTableButton" mnemonicParsing="false" onAction="#clearLog" text="Clear Table">
                <VBox.margin>
                   <Insets bottom="5.0" left="40.0" />
                </VBox.margin>
