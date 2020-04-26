@@ -26,7 +26,7 @@ public class Controller {
     private GraphicsContext graphContext;
 
     //instantiating the pixle.
-    public thePixel myPixle = new thePixel();
+    public thePixel myPixel = new thePixel();
 
 
 
@@ -79,7 +79,7 @@ public class Controller {
 
     public void drawOnCanvas(){
         clearCanvas(); //we will be clearing canvas everytime, we update
-        myPixle.DrawObject(graphContext);
+        myPixel.DrawObject(graphContext);
     }
 
     public void clearCanvas(){
@@ -105,48 +105,48 @@ public class Controller {
     public void receiveMessage(UDPmessage udpMessage)
     {
         if(udpMessage.getMessage().contains("init 9 9")) {
-            myPixle.setActivator(true);
+            myPixel.setActivator(true);
             //casting as an int
-            myPixle.setX((int) myCanvas.getWidth() / 2);
-            myPixle.setY((int) myCanvas.getHeight() / 2);
+            myPixel.setX((int) myCanvas.getWidth() / 2);
+            myPixel.setY((int) myCanvas.getHeight() / 2);
             table.getItems().add(0, udpMessage);
             drawOnCanvas(); //draws the pixle on canvas if initialized
         }
 
-        if (myPixle.isActivator() == true) {
+        if (myPixel.isActivator() == true) {
 
             if (udpMessage.getMessage().contains("speed1")) {
-                myPixle.setMyspeed(10);
+                myPixel.setMyspeed(10);
             }
             if (udpMessage.getMessage().contains("speed4")) {
-                myPixle.setMyspeed(15);
+                myPixel.setMyspeed(15);
             }
             if (udpMessage.getMessage().contains("speed7")) {
-                myPixle.setMyspeed(20);
+                myPixel.setMyspeed(20);
             }
             if (udpMessage.getMessage().contains("speed9")) {
-                myPixle.setMyspeed(25);
-            } else {
-                myPixle.setMyspeed(1);
-            }
+                myPixel.setMyspeed(25);
+            } else
+                myPixel.setMyspeed(1);
+
 
             if (udpMessage.getMessage().contains("moveup")) {
-                myPixle.setY(myPixle.getY() - myPixle.getMyspeed());
+                myPixel.setY(myPixel.getY() - myPixel.getMyspeed());
             }
             if (udpMessage.getMessage().contains("movedown")) {
-                myPixle.setY(myPixle.getY() + myPixle.getMyspeed());
+                myPixel.setY(myPixel.getY() + myPixel.getMyspeed());
             }
             if (udpMessage.getMessage().contains("moveright")) {
-                myPixle.setX(myPixle.getX() + myPixle.getMyspeed());
+                myPixel.setX(myPixel.getX() + myPixel.getMyspeed());
             }
             if (udpMessage.getMessage().contains("moveleft")) {
-                myPixle.setX(myPixle.getX() - myPixle.getMyspeed());
+                myPixel.setX(myPixel.getX() - myPixel.getMyspeed());
             }
             table.getItems().add(0, udpMessage);
             drawOnCanvas();
 
         }else{
-            myPixle.setActivator(false);
+            myPixel.setActivator(false);
             System.out.println("COMMAND NOT ACCEPTED: Please intiate the pixle first by clicking the controller");
         }
 
