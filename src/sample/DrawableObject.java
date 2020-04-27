@@ -12,7 +12,7 @@ public abstract class DrawableObject {
     private Color color;
     private String object;
 
-
+    //standard abstract method that takes the GraphicsContext (our pen) as parameter to draw on the canvas
     public abstract void  DrawObject(GraphicsContext graphicsContext);
 
     //setters and getters

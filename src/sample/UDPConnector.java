@@ -15,7 +15,7 @@ public class UDPConnector implements Runnable {
     private Controller messageHandler;
     private boolean receivedMessage = true;
 
-    //constructor
+    //constructor Handles messages
     public UDPConnector (Controller messageHandler){
         this.messageHandler = messageHandler;
         setupSocket();
@@ -62,7 +62,7 @@ public class UDPConnector implements Runnable {
     }
 
 
-    public UDPmessage receiveMessage() {
+    public UDPmessage receiveMessage() { //Receives message and prints in terminal
         byte[] buffer = new byte[256];
         DatagramPacket myPacket = new DatagramPacket(buffer, buffer.length);
         try{
@@ -87,7 +87,7 @@ public class UDPConnector implements Runnable {
             }
         }
 
-    public void echoServer()
+    public void echoServer() //Echoes received message back to sender
     {
         UDPmessage myMessage = receiveMessage();
         try {

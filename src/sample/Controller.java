@@ -107,6 +107,7 @@ public class Controller {
         if(udpMessage.getMessage().contains("init 9 9")) {
             myPixel.setActivator(true);
             //casting as an int
+            //dividing height and width of the canvas by 2 to land in the middle of the canvas
             myPixel.setX((int) myCanvas.getWidth() / 2);
             myPixel.setY((int) myCanvas.getHeight() / 2);
             table.getItems().add(0, udpMessage);

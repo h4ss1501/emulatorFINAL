@@ -41,7 +41,7 @@ public class UDPbroadcastServer implements Runnable {
 
     }
 
-    public void broadcastLoop()
+    public void broadcastLoop() //keeps looping the broadcast message, puts thread to sleep for 3 seconds while broadcasting
     {
         do{
             try{
