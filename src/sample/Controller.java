@@ -116,22 +116,26 @@ public class Controller {
 
         if (myPixel.isActivator() == true){
 
+            //switch statement that sets the speed on the pixle
 
-            if (udpMessage.getMessage().contains("speed1")) {
-                myPixel.setMyspeed(10);
+            switch(udpMessage.getMessage()){
+                case "s1":
+                    myPixel.setMyspeed(5);
+                    break;
+                case "s2":
+                    myPixel.setMyspeed(10);
+                    break;
+                case "s3":
+                    myPixel.setMyspeed(15);
+                    break;
+                case "s4":
+                    myPixel.setMyspeed(20);
+                    break;
+                default:
+                    myPixel.setMyspeed(2);
             }
-            else if (udpMessage.getMessage().contains("speed4")) {
-                myPixel.setMyspeed(15);
-            }
-            else if (udpMessage.getMessage().contains("speed7")) {
-                myPixel.setMyspeed(20);
-            }
-            else if (udpMessage.getMessage().contains("speed9")) {
-                myPixel.setMyspeed(25);
-            }else{
-                myPixel.setMyspeed(2);}
 
-
+            //if statements that moves the pixel positions based on a command
 
             if (udpMessage.getMessage().contains("moveup")) {
                 myPixel.setY(myPixel.getY() - myPixel.getMyspeed());
