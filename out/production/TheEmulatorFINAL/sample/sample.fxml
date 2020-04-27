@@ -9,16 +9,16 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <center>
-      <Canvas fx:id="myCanvas" height="250.0" width="456.0" BorderPane.alignment="TOP_RIGHT">
+      <Canvas fx:id="myCanvas" height="242.0" width="451.0" BorderPane.alignment="TOP_RIGHT">
          <BorderPane.margin>
             <Insets />
          </BorderPane.margin>
       </Canvas>
    </center>
    <left>
-      <VBox BorderPane.alignment="CENTER">
+      <VBox prefWidth="167.0" BorderPane.alignment="CENTER">
          <children>
-            <HBox prefHeight="49.0" prefWidth="167.0">
+            <HBox prefHeight="54.0" prefWidth="167.0">
                <children>
                   <Label fx:id="ToggleButtonECHO" contentDisplay="CENTER" minHeight="-Infinity" minWidth="-Infinity" prefHeight="76.0" prefWidth="94.0" text="Echoserver on 127.0.0.1:7000" textAlignment="CENTER" wrapText="true">
                      <font>
@@ -35,9 +35,9 @@
                   </ToggleButton>
                </children>
                <VBox.margin>
-                  <Insets />
+                  <Insets top="30.0" />
                </VBox.margin></HBox>
-            <HBox prefHeight="115.0" prefWidth="139.0">
+            <HBox prefHeight="55.0" prefWidth="167.0">
                <children>
                   <Label alignment="TOP_RIGHT" prefHeight="44.0" prefWidth="90.0" text="Broadcast on port: 7007" textAlignment="CENTER" wrapText="true">
                      <opaqueInsets>
@@ -47,12 +47,12 @@
                         <Font size="14.0" />
                      </font>
                      <HBox.margin>
-                        <Insets top="40.0" />
+                        <Insets top="10.0" />
                      </HBox.margin>
                   </Label>
                   <ToggleButton fx:id="toggleButtonBroadcast" mnemonicParsing="false" onAction="#toggleButtonBroadcastServer" prefHeight="25.0" prefWidth="39.0" text="ON">
                      <HBox.margin>
-                        <Insets left="15.0" top="45.0" />
+                        <Insets left="15.0" top="15.0" />
                      </HBox.margin></ToggleButton>
                </children>
                <VBox.margin>
@@ -61,12 +61,12 @@
             </HBox>
             <ToggleButton fx:id="clearCanvasButton" alignment="CENTER" mnemonicParsing="false" onAction="#clearCanvas" text="Clear Canvas">
                <VBox.margin>
-                  <Insets bottom="5.0" left="35.0" />
+                  <Insets bottom="5.0" left="35.0" top="10.0" />
                </VBox.margin>
             </ToggleButton>
-            <ToggleButton fx:id="clearTableButton" mnemonicParsing="false" onAction="#clearLog" text="Clear Table">
+            <ToggleButton fx:id="clearTableButton" mnemonicParsing="false" onAction="#clearLog" prefHeight="27.0" prefWidth="75.0" text="Clear Table">
                <VBox.margin>
-                  <Insets bottom="5.0" left="40.0" />
+                  <Insets bottom="5.0" left="40.0" top="5.0" />
                </VBox.margin>
             </ToggleButton>
          </children></VBox>
@@ -76,33 +76,33 @@
          <children>
             <AnchorPane prefHeight="48.0" prefWidth="598.0">
                <children>
-                  <Label alignment="CENTER" prefHeight="40.0" prefWidth="600.0" text="Echo Emulator" textAlignment="CENTER">
+                  <Label alignment="CENTER" prefHeight="35.0" prefWidth="600.0" text="THE BOOMERANG" textAlignment="CENTER">
                      <font>
-                        <Font size="19.0" />
+                        <Font name="Berlin Sans FB Demi Bold" size="42.0" />
                      </font></Label>
                </children>
             </AnchorPane>
          </children></HBox>
    </top>
    <bottom>
-      <TableView fx:id="table" prefHeight="101.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <TableView fx:id="table" prefHeight="109.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <columns>
             <TableColumn prefWidth="138.0" text="Time">
                <cellValueFactory>
                   <PropertyValueFactory property="time" />
                </cellValueFactory>
             </TableColumn>
-            <TableColumn prefWidth="247.0" text="Message">
+            <TableColumn prefWidth="197.39999389648438" text="Message">
                <cellValueFactory>
                   <PropertyValueFactory property="message" />
                </cellValueFactory>
             </TableColumn>
-            <TableColumn minWidth="0.0" prefWidth="51.0" text="Length">
+            <TableColumn minWidth="0.0" prefWidth="101.79998779296875" text="Length">
                <cellValueFactory>
                   <PropertyValueFactory property="length" />
                </cellValueFactory>
             </TableColumn>
-            <TableColumn minWidth="0.0" prefWidth="147.0" text="IP">
+            <TableColumn minWidth="0.0" prefWidth="161.60000610351562" text="IP">
                <cellValueFactory>
                   <PropertyValueFactory property="IpAndString" />
                </cellValueFactory>

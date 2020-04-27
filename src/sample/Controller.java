@@ -131,23 +131,34 @@ public class Controller {
                 case "s4":
                     myPixel.setMyspeed(20);
                     break;
-                default:
-                    myPixel.setMyspeed(2);
             }
 
             //if statements that moves the pixel positions based on a command
+            //nested if-statement secures that the pixel stays within the boundaries of the canvas.
 
             if (udpMessage.getMessage().contains("moveup")) {
                 myPixel.setY(myPixel.getY() - myPixel.getMyspeed());
+                if(myPixel.getY() < 0){
+                    myPixel.setMyspeed(0);
+                }
             }
             if (udpMessage.getMessage().contains("movedown")) {
                 myPixel.setY(myPixel.getY() + myPixel.getMyspeed());
+                    if(myPixel.getX() > myCanvas.getWidth()){
+                        myPixel.setMyspeed(0);
+                    }
             }
             if (udpMessage.getMessage().contains("moveright")) {
                 myPixel.setX(myPixel.getX() + myPixel.getMyspeed());
+                if(myPixel.getX() > myCanvas.getWidth()){
+                    myPixel.setMyspeed(0);
+                }
             }
             if (udpMessage.getMessage().contains("moveleft")) {
                 myPixel.setX(myPixel.getX() - myPixel.getMyspeed());
+                if(myPixel.getX() > myCanvas.getWidth()) {
+                    myPixel.setMyspeed(0);
+                }
             }
             table.getItems().add(0, udpMessage);
             drawOnCanvas();
