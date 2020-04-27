@@ -13,7 +13,7 @@ public class thePixel extends DrawableObject{
     private int width = 15;
     private int height = 15;
     private Color myColor = Color.BLACK;
-    private int myspeed;
+    private int mySpeed;
     protected boolean activator;
 
 
@@ -86,12 +86,12 @@ public class thePixel extends DrawableObject{
     }
 
     public int getMyspeed() {
-        return myspeed;
+        return mySpeed;
     }
 
     public void setMyspeed(int myspeed) {
 
-        this.myspeed = myspeed;
+        this.mySpeed = myspeed;
     }
 
 

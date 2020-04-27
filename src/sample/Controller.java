@@ -110,7 +110,7 @@ public class Controller {
             //dividing height and width of the canvas by 2 to land in the middle of the canvas
             myPixel.setX((int) myCanvas.getWidth() / 2);
             myPixel.setY((int) myCanvas.getHeight() / 2);
-            table.getItems().add(0, udpMessage);
+            table.getItems().add(0, udpMessage); // updates table
             drawOnCanvas(); //draws the pixle on canvas if initialized
         }
 
@@ -134,7 +134,7 @@ public class Controller {
             }
 
             //if statements that moves the pixel positions based on a command
-            //nested if-statement secures that the pixel stays within the boundaries of the canvas.
+            //nested if-statement secures that the pixel stays within the boundaries of the canvas, by setting speed to 0
 
             if (udpMessage.getMessage().contains("moveup")) {
                 myPixel.setY(myPixel.getY() - myPixel.getMyspeed());
